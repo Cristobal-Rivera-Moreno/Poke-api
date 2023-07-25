@@ -34,11 +34,11 @@ export function PokeInfo({pokemon}){
             <div  className="self-start flex flex-row">
                
             {pokemon.abilities.map((item,i)=>{
-                return 
+                return (
                     <div key={i} className="bg-red-400 m-2 rounded p-2 font-mono font-bold text-white " >
                         <h1 className="abilities">{item.ability.name}</h1>
                     </div>
-                    
+                )
             })}
              </div>
             </>):<h1 className="font-mono font-bold text-black">No se ha seleccionado ningún pokemon</h1>}
