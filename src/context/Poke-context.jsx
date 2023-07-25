@@ -66,7 +66,7 @@ export function PokeContextProvider(props) {
 </button>
 <button id="more-info-button" onClick={()=>{ document.getElementById('more-info').classList.toggle('hidden') }} className="group fixed left-3/4 top-2 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full">
   Más información
-  <img className="inline-block group-hover:animate-ping" src="https://github.com/Cristobal-Rivera-Moreno/Poke-api/tree/main/src/assets/pokebola.png" width={20}></img><p className="text-xs">Image By Nikita Golubev</p>
+  <img className="inline-block group-hover:animate-ping" src="./src/assets/pokebola.png" type="image/png+xml" width={20}></img><p className="text-xs">Image By Nikita Golubev</p>
 </button>
 
 <div id="defaultModal" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
