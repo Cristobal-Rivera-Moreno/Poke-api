@@ -41,7 +41,7 @@ export function PokeList() {
     <> 
     
     <div className="flex flex-row items-start mt-20">
-      <div className="basis-3/5 grid grid-cols-2" >
+      <div className="basis-3/5 grid grid-cols-1 lg:grid-cols-2" >
         {pokemons.map((item) => {
           return <PokeCard key={item.id} pokemon={item} infoPokemon={pokemon=>setOnePokemon(pokemon)}></PokeCard>;
         })}

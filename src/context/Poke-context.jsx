@@ -57,16 +57,22 @@ export function PokeContextProvider(props) {
     { true?(
       <>
 
-    <button className="fixed top-2 font-mono p-1 bg-cyan-600 rounded text-black  hover:bg-zinc-600 hover:scale-125  hover:text-white font-bold" onClick={()=>{setUrl(previousUrl)}}>Anterior</button>
-    <button className="fixed top-2 left-1/4 p-1 font-mono bg-cyan-600 rounded text-black hover:bg-zinc-600 hover:scale-125 hover:text-white font-bold" onClick={()=>{ ;;nextUrl=='https://pokeapi.co/api/v2/pokemon?offset=1260&limit=20' ? 0 :setUrl(nextUrl)}}>Siguiente</button>
+    <button className="fixed left-1/4 md:left-auto top-2 font-mono p-1 bg-cyan-600 rounded text-black  hover:bg-zinc-600 hover:scale-125  hover:text-white font-bold" onClick={()=>{setUrl(previousUrl)}}>Anterior</button>
+    <button className="fixed top-12 left-1/4 md:mb-0 md:top-2  p-1 font-mono bg-cyan-600 rounded text-black hover:bg-zinc-600 hover:scale-125 hover:text-white font-bold" onClick={()=>{ nextUrl=='https://pokeapi.co/api/v2/pokemon?offset=1260&limit=20' ? 0 :setUrl(nextUrl)}}>Siguiente</button>
     
 
-<button data-modal-target="defaultModal" data-modal-toggle="defaultModal" className="block focus:ring-4 focus:outline-none focus:ring-blue-300   text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 fixed top-2 left-2/4  bg-cyan-600 rounded text-black  hover:bg-zinc-600 hover:scale-125  hover:text-white font-bold" type="button">
-  Buscar pokemon
+<button data-modal-target="defaultModal" data-modal-toggle="defaultModal" className="block focus:ring-4 focus:outline-none focus:ring-blue-300   text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 fixed top-2 left-0 md:left-2/4  bg-cyan-600 rounded text-black  hover:bg-zinc-600 hover:scale-125  hover:text-white font-bold" type="button">
+  <span className="hidden md:inline-block">Buscar pokemon</span>
+  <span className="w-4 text-xl inline-block md:hidden">🔍</span>
 </button>
-<button id="more-info-button" onClick={()=>{ document.getElementById('more-info').classList.toggle('hidden') }} className="group fixed left-3/4 top-2 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full">
-  Más información
-  <img className="inline-block group-hover:animate-ping" src="./assets/pokebola-3dded3cd.png" type="image/png+xml" width={20}></img><p className="text-xs">Image By Nikita Golubev</p>
+<button id="more-info-button" onClick={()=>{ document.getElementById('more-info').classList.toggle('hidden') }} className="animate-pulse md:animate-none top-16 z-50 left-0 group fixed md:left-3/4 md:top-2 bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded-full">
+  
+  <span className="hidden md:inline-block">Más información</span>
+  
+  <img className="hidden md:inline-block  group-hover:animate-ping" src="./assets/pokebola-3dded3cd.png" type="image/png+xml" width={20}></img><p className="text-xs hidden md:inline-block">Image By Nikita Golubev</p>
+  
+  <span className="inline-block  text-xl md:hidden ">📓</span>
+
 </button>
 
 <div id="defaultModal" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">

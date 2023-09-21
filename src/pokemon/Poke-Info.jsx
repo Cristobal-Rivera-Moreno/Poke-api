@@ -18,10 +18,10 @@ export function PokeInfo({pokemon}){
     }
 
     return (
-        <div id="more-info" className="flex hidden flex-col items-center bg-blue-100 rounded basis-2/5 fixed top-1/5 w-1/4 left-3/4 h-4/5 border-8 border-blue-400 border-dashed ">
+        <div id="more-info" className="flex hidden flex-col items-center bg-blue-100 rounded basis-2/5 fixed h-4/5 top-1/5 w-3/4 md:w-2/6 md:left-2/3 lg:w-1/4 left-0 lg:left-3/4  lg:h-4/5 border-8 border-blue-400 border-dashed ">
             {pokemon?(
                 <>
-            <img src={pokemon.sprites.front_default} className="w-3/5" alt="" />
+            <img src={pokemon.sprites.front_default} className="w-40 md:w-40 lg:w-3/5" alt="" />
             <h1 className="text-black font-mono font-bold text-3xl  stroke-white stroke-1 name">{pokemon.name}</h1>
             {pokemon.stats.map((item,i)=>{
                 return <div key={i} className="ml-2 self-start flex flex-row">
