@@ -18,7 +18,7 @@ export function PokeInfo({pokemon}){
     }
 
     return (
-        <div id="more-info" className="flex hidden flex-col items-center bg-blue-100 rounded basis-2/5 fixed h-4/5 top-1/5 w-80 md:w-2/6 md:left-2/3 lg:w-1/4 left-0 lg:left-3/4 lg:h-screen border-8 border-blue-400 border-dashed ">
+        <div id="more-info" className="flex hidden flex-col items-center bg-blue-100 rounded basis-2/5 fixed h-auto top-1/5 w-80 md:w-2/6 md:left-2/3 lg:w-1/4 left-0 lg:left-3/4 lg:h-auto border-8 border-blue-400 border-dashed ">
             <button className="text-black self-end w-10 h-10 rounded-full bg-black/10 font-bold hover:scale-105 hover:bg-black/20" onClick={(ev)=>document.getElementById('more-info').classList.toggle('hidden')}>X</button>
             {pokemon?(
                 <>
