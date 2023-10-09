@@ -15,11 +15,9 @@ export function PokeContextProvider(props) {
       setMsg(msg)
     }
     const pokeFun = async()=>{
-      const res = await axios.get(url);
-     
-      console.log("res=> ",res.data.next );
-      setNextUrl(res.data.next);
       
+      const res = await axios.get(url);
+      setNextUrl(res.data.next);
       setPreviousUrl(res.data.previous);
       let array = [];
       res.data.results.forEach(element => {
@@ -44,8 +42,8 @@ export function PokeContextProvider(props) {
     }
   
     useEffect(()=>{
-       
-     
+     setPokemons(null)
+        
         pokeFun();
     },[url]);
     useEffect(()=>{
@@ -116,7 +114,7 @@ export function PokeContextProvider(props) {
     </div>
 </div>
 
-      <PokeContext.Provider value={{pokemons,valuepoke,responseSearch}}>{props.children} </PokeContext.Provider>
+      <PokeContext.Provider value={{pokemons,valuepoke,responseSearch,loading}}>{props.children} </PokeContext.Provider>
     </>):(<h1>Loading ... </h1>)}
       </>
   );
